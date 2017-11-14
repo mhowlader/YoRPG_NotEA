@@ -1,5 +1,5 @@
-public class MageM extends Monster{
-  public MageM(){
+public class Witch extends Monster{
+  public Witch(){
     super();
     life = 150;
     defense = 25;
