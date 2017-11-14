@@ -1,8 +1,8 @@
 public class Character {
-    public int life;
-    public int strength;
-    public int defense;
-    public double attackr;
+    protected int life;
+    protected int strength;
+    protected int defense;
+    protected double attackr;
 
     public boolean isAlive() {
 	return life > 0; //checks if alive
