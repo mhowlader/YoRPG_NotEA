@@ -27,6 +27,7 @@ public class YoRPG
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
+  private int role;
 
   private InputStreamReader isr;
   private BufferedReader in;
@@ -80,7 +81,31 @@ public class YoRPG
     catch ( IOException e ) { }
 
     //instantiate the player's character
-    pat = new Protagonist( name );
+    //pat = new Protagonist( name );
+	
+	s= "\n Choose your Role: \n";
+	s += "\t1: Tank\n";
+	s += "\t2: Berserker\n";
+	s += "\t3: Mage\n";
+	s += "Selection: ";
+	System.out.print(s);
+	
+	try {
+		role = Integer.parseInt( in.readLine() ); //
+	}
+	catch (IOException e) { }
+	
+	//assigns subsclass based on number chosen
+	if (role == 1) {
+		pat = new Tank(name);
+	}
+	else if (role ==2) {
+		pat = new Berserker(name);
+	}
+	else {
+		pat=new Mage(name);
+	}
+	
 
   }//end newGame()
 
@@ -95,13 +120,30 @@ public class YoRPG
   {
     int i = 1;
     int d1, d2;
+	String mName;
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
-
-	    smaug = new Monster();
+		
+		//1/3 chance to enounter any of the 3 types of monsters
+		double danger = Math.random();
+		if (danger < 0.333) {
+			smaug = new Goblin();
+			mName="Goblin";
+		}
+		else if (danger >=0.333 && danger <0.666) {
+			smaug = new Golem();
+			mName="Golem";
+		}
+		else {
+			smaug = new Witch();
+			mName="Witch";
+		}
+		
+		System.out.println( "\nIt is a " + mName + "!" );
+	    
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
