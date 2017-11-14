@@ -4,11 +4,11 @@ HW 28 -- Ye Olde Role Playing Game
 11-09-17 */
 
 public class Protagonist extends Character{
-    public String name; 
-    public int life; //HP
-    public int strength;
-    public int defense;
-    public double attackr; //Attack Rating
+    protected String name; 
+    protected int life; //HP
+    protected int strength;
+    protected int defense;
+    protected double attackr; //Attack Rating
 
 
     public Protagonist(String x){
