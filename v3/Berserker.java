@@ -1,5 +1,4 @@
 public class Berserker extends Protagonist{ 
-  private String name = "AngryMan";
   public Berserker(){
     super(name);
     attackr = .7;
