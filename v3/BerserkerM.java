@@ -4,6 +4,6 @@ public class BerserkerM extends Monster{
     life = 75;
     }
   public static String about(){
-    return "Goblin is a hero class that has high attack rating, low HP, and regular defense."
+    return "Goblin is a monster class that has high attack rating, low HP, and regular defense."
   }
 }
