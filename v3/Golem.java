@@ -1,5 +1,5 @@
-public class TankM extends Monster {
-  public TankM() {
+public class Golem extends Monster {
+  public Golem() {
     super();
     attackr = 0.2;
     defense = 50; }
