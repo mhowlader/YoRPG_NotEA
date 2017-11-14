@@ -3,7 +3,7 @@ APCS1 pd 2
 HW 28 -- Ye Olde Role Playing Game
 11-09-17 */
 
-public class Protagonist extends Character{
+public abstract class  Protagonist extends Character{
     protected String name; 
     protected int life; //HP
     protected int strength;
@@ -43,17 +43,13 @@ public class Protagonist extends Character{
     }
 	
 	//Special Attacl
-    public void specialize(){
-	defense -= 10; //reduces defense
-	attackr += .6; //increases Attack Rating
-    }
+    public abstract void specialize();
 	
 	//Sets defense and attack rating to base values
 	//Prepares for Normal Attack
-    public void normalize(){
-	defense = 40; 
-	attackr = .4;
-    }
+    public abstract void normalize();
+
+    public abstract String about();
 }
     
 	
