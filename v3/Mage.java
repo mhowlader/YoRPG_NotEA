@@ -1,5 +1,4 @@
 public class Mage extends Protagonist{ 
-  private String name = "MagicMan";
   public Mage(){
     super(name);
     life = 175;
