@@ -4,6 +4,6 @@ public class TankM extends Monster {
     attackr = 0.2;
     defense = 50; }
   public static String about(){
-    return "Tank is a monster class that has high defense, low attack rating, and regular HP."
+    return "Golem is a monster class that has high defense, low attack rating, and regular HP."
   }
     }
