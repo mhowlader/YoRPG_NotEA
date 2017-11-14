@@ -1,4 +1,4 @@
-public class BerserkerM extends Monster{ 
+public class Goblin extends Monster{ 
   super(){
     attackr = .5;
     life = 75;
