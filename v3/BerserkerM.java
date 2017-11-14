@@ -1,6 +1,6 @@
 public class BerserkerM extends Monster{ 
   super(){
     attackr = .5;
-    life = 50;
+    life = 75;
     }
 }
