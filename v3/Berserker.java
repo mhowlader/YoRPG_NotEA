@@ -3,10 +3,9 @@ public class Berserker extends Protagonist{
   public Berserker(){
     super(name);
     attackr = .7;
-    defense = 25;
+    life = 50;
   }
   public void normalize() {
     attackr = .7;
-    defense = 25;
   }
 }
