@@ -1,16 +1,24 @@
-public class Mage extends Protagonist{ 
-  public Mage(String name){
+public class Berserker extends Protagonist{ 
+  public Berserker(String name){
 
     super(name);
-    life = 175;
-    defense = 25;
+    life = 80;
+    attackr=0.6;
   }
   public void normalize(){
-    defense = 25;
+    defense=40;
+	attackr=0.6;
+	
   }
+  
+  public void specialize() {
+	  defense-=10;
+	  attackr+=0.3;
+  }
+  
 
-  public static String about(){
-    return "Mage is a hero class that has high HP, low defense, and regular attack rating.";
+  public String about(){
+    return "Berserker is a hero class that has low HP, high attack rating, and regular defense.";
   }
 }
 

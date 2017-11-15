@@ -6,10 +6,16 @@ public class Mage extends Protagonist{
     defense = 25;
   }
   public void normalize(){
+	attackr=0.40;
     defense = 25;
   }
+  public void specialize() {
+	  defense-=5;
+	  attackr+=0.20;
+  }
+  
 
-  public static String about(){
+  public String about(){
     return "Mage is a hero class that has high HP, low defense, and regular attack rating.";
   }
 }
