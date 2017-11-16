@@ -50,6 +50,13 @@ public abstract class  Protagonist extends Character{
     public abstract void normalize();
 
     public abstract String about();
+	
+	public abstract String firstAtt();
+	
+	public abstract String secAtt();
+	
+	public abstract String thirAtt();
+	
 }
     
 	
