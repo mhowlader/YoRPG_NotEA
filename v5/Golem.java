@@ -1,7 +1,7 @@
 public class Golem extends Monster {
   public Golem() {
     super();
-    attackr = 0.2;
+    attackr = 1.2;
     defense = 50; }
   public static String about(){
 
