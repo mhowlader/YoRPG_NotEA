@@ -18,8 +18,9 @@ public class YoRPG
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
 
   //change this constant to set number of encounters in a game
-  public final static int MAX_ENCOUNTERS = 5;
-
+  public final static int MAX_ENCOUNTERS = 15;
+  private static int encounters = 0; 
+	
   //each round, a Protagonist and a Monster will be instantiated...
   private Protagonist pat;   //Is it man or woman?
   private Monster smaug; //Friendly generic monster name?
@@ -129,7 +130,11 @@ public class YoRPG
 		
 		//1/3 chance to enounter any of the 3 types of monsters
 		double danger = Math.random();
-		if (danger < 0.333) {
+		if (encounters % 3 == 2) {
+			smaug = new Boss();
+			mName = "Monster King";
+		}
+	    	else if (danger < 0.333) {
 			smaug = new Goblin();
 			mName="Goblin";
 		}
@@ -213,8 +218,6 @@ public class YoRPG
     
     //loading...
     YoRPG game = new YoRPG();
-
-    int encounters = 0;
 
     while( encounters < MAX_ENCOUNTERS ) {
     if ( !game.playTurn() )
