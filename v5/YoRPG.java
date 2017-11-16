@@ -19,7 +19,7 @@ public class YoRPG
 
   //change this constant to set number of encounters in a game
   public final static int MAX_ENCOUNTERS = 15;
-  private int encounters = 0; 
+  private static int encounters = 0; 
 	
   //each round, a Protagonist and a Monster will be instantiated...
   private Protagonist pat;   //Is it man or woman?
