@@ -162,12 +162,12 @@ public class YoRPG
         }
         catch ( IOException e ) { }
 
-        if ( i == 2 )
-          pat.specialize();
-        else ( i == 1 ) 
-          pat.normalize();
-	else 
-          pat.classSpecial();
+        if ( i == 2 ) {
+          pat.specialize(); }
+        else if ( i == 1 ) {
+          pat.normalize(); }
+	else {
+          pat.classSpecial(); }
 	/*  try {
 			System.out.println( "\nSelect an attack:" );
 			System.out.printf( "\n1. %s \t 2. %s \t 3. %s\n", pat.firstAttName(), pat.secAttName(), pat.thirAttName () );
