@@ -14,12 +14,18 @@ public class Mage extends Protagonist{
 	  attackr+=0.20;
   }
   
-
+  public void classSpecial() {
+	  if (Math.random() > 0.7) {
+	  	life += 65;}
+  	  else {
+	  	normalize();
+	  }
+  }
   public String about(){
     return "Mage is a hero class that has high HP, low defense, and regular attack rating.";
   }
   
-  public String firstAttName() {
+  /*public String firstAttName() {
 	return "Meditation";
   }
   
@@ -30,7 +36,7 @@ public class Mage extends Protagonist{
   public String thirAttName() {
 	return "thir";
 	
-  }
+  }*/
   
   
 }
