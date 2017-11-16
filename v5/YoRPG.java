@@ -210,8 +210,6 @@ public class YoRPG
     //loading...
     YoRPG game = new YoRPG();
 
-    int encounters = 0;
-
     while( encounters < MAX_ENCOUNTERS ) {
     if ( !game.playTurn() )
 		break;
