@@ -15,12 +15,20 @@ public class Tank extends Protagonist {
 	  attackr+=0.3;
   }
   
-
+  public void classSpecial() {
+	  if (Math.random() > 0.7) {
+	  	defense += 50;
+	  	attackr -= 0.1;}
+  	  else {
+	  	normalize();
+	  }
+  }
+	  
   public String about() {
     return "Tank is a hero class that has high defense, low attack rating, and regular HP.";
   }
   
-  public String firstAttName() {
+  /*public String firstAttName() {
 	return "Meditation";
   }
   
@@ -30,6 +38,6 @@ public class Tank extends Protagonist {
   
   public String thirAttName() {
 	return "thir";
-	
+*/	
   }
 }
