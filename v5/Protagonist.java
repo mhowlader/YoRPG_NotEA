@@ -39,6 +39,8 @@ public abstract class  Protagonist extends Character{
     public int attack(Monster x){
 	int damage = (int) (strength * attackr) - x.getDefense(); //damage inflicted calculation
 	x.lowerHP(damage); //lowers HP by damage
+	if (damage < 0) {
+		return 0; }
 	return damage;
     }
 	
