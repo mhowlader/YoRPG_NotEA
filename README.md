@@ -42,4 +42,4 @@
 ##### Enhanced Blast: 50% chance to either increase or decrease defense prior to the attack.
 ##### Full Overdrive: Major increase to defense and attack stats if successful, then attack.
 
-##### The game is over when you are killed or after 15 encounters.
+#### The game is over when you are killed or after 15 encounters.
