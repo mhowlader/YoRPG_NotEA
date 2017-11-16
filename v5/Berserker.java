@@ -16,12 +16,19 @@ public class Berserker extends Protagonist{
 	  attackr+=0.3;
   }
   
-
+  public void classSpecial() {
+	  if (Math.random() > 0.7) {
+	  	defense -= 20;
+	  	attackr += 0.4;}
+  	  else {
+	  	normalize();
+	  }
+  }
   public String about(){
     return "Berserker is a hero class that has low HP, high attack rating, and regular defense.";
   }
   
-  public String firstAttName() {
+  /*public String firstAttName() {
 	return "Meditation";
   }
   
@@ -32,6 +39,6 @@ public class Berserker extends Protagonist{
   public String thirAttName() {
 	return "thir";
 	
-  }
+  }*/
 }
 
