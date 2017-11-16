@@ -51,12 +51,13 @@ public abstract class  Protagonist extends Character{
 
     public abstract String about();
 	
-	public abstract String firstAttName();
+    public abstract void classSpecial();
+/*	public abstract String firstAttName();
 	
 	public abstract String secAttName();
 	
 	public abstract String thirAttName();
-	
+*/	
 }
     
 	
