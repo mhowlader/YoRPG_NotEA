@@ -20,5 +20,18 @@ public class Berserker extends Protagonist{
   public String about(){
     return "Berserker is a hero class that has low HP, high attack rating, and regular defense.";
   }
+  
+  public String firstAttName() {
+	return "Meditation";
+  }
+  
+  public String secAttName() {
+	return "Sec";
+  }
+  
+  public String thirAttName() {
+	return "thir";
+	
+  }
 }
 

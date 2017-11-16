@@ -18,5 +18,17 @@ public class Mage extends Protagonist{
   public String about(){
     return "Mage is a hero class that has high HP, low defense, and regular attack rating.";
   }
+  
+  public String firstAtt() {
+	  return "First";
+  }
+  
+  public String secAtt() {
+	  return "Second";
+  }
+  
+  public String thirAtt() {
+	  return "Third";
+  }
 }
 

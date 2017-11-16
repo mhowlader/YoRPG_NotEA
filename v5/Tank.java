@@ -19,4 +19,17 @@ public class Tank extends Protagonist {
   public String about() {
     return "Tank is a hero class that has high defense, low attack rating, and regular HP.";
   }
+  
+  public String firstAttName() {
+	return "Meditation";
+  }
+  
+  public String secAttName() {
+	return "Sec";
+  }
+  
+  public String thirAttName() {
+	return "thir";
+	
+  }
 }

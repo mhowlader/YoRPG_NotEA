@@ -51,11 +51,11 @@ public abstract class  Protagonist extends Character{
 
     public abstract String about();
 	
-	public abstract String firstAtt();
+	public abstract String firstAttName();
 	
-	public abstract String secAtt();
+	public abstract String secAttName();
 	
-	public abstract String thirAtt();
+	public abstract String thirAttName();
 	
 }
     

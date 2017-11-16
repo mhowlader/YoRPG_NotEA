@@ -119,7 +119,7 @@ public class YoRPG
   public boolean playTurn()
   {
     int i = 1;
-    int d1, d2;
+    int d1, d2, selAtck;
 	String mName;
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
@@ -161,6 +161,14 @@ public class YoRPG
           pat.specialize();
         else
           pat.normalize();
+	  
+	  try {
+			System.out.println( "\nSelect an attack:" );
+			System.out.printf( "\n1. %s \t 2. %s \t 3. %s\n", pat.firstAttName(), pat.secAttName(), pat.thirAttName () );
+			System.out.print("Selection: ");
+			selAtck= Integer.parseInt(in.readLine() );
+		}
+		catch (IOException e) {}
 
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
