@@ -38,6 +38,6 @@ public class Tank extends Protagonist {
   
   public String thirAttName() {
 	return "thir";
-*/	
-  }
+	
+  }*/
 }
