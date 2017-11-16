@@ -1,6 +1,6 @@
 # YoRPG_NotEA
 ### Ye Olde RPG Game
-### NotEA: Hasif Ahmed, Mohtasim Howlader, Kyle Tau
+### NotEA: Hasif Ahmed, Mohtasim Howlader, Kyle Tau (Team 10)
 ### *Protagonist*
 #### Hero of the RPG
 ### *Monster*
