@@ -3,7 +3,7 @@ public class Goblin extends Monster{
 	public Goblin() {
 		
 		super();
-		attackr = .5;
+		attackr = 1.0;
 		life = 75;
     }
   public static String about(){
