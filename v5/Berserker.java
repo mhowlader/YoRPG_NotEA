@@ -22,16 +22,35 @@ public class Berserker extends Protagonist{
   }
   
   public String firstAttName() {
-	return "Meditation";
+	return "Normal Slash";
   }
   
   public String secAttName() {
-	return "Sec";
+	return "Heightened Slash";
   }
   
   public String thirAttName() {
-	return "thir";
+	return "Berserker's Bane";
 	
   }
+  
+  public void secAtt() {
+	  if (Math.random() <0.5) { //50% chance of being beneficial
+		  defense += 20;
+		  System.out.println("Defense has increased!");
+	  }
+	  else {
+		  defense-=10;
+		  System.out.println("Defense has decreased!");
+	  }
+  }
+  
+  public void thirAtt() {
+	  attackr += 0.4;
+	  defense += 30;
+  }
+  	 
+	  
+  
 }
 

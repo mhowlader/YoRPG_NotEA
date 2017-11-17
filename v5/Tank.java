@@ -21,15 +21,30 @@ public class Tank extends Protagonist {
   }
   
   public String firstAttName() {
-	return "Meditation";
+	return "Blast";
   }
   
   public String secAttName() {
-	return "Sec";
+	return "Enhanced Blast";
   }
   
   public String thirAttName() {
-	return "thir";
+	return "Full Overdrive";
 	
   }
+  
+  public void secAtt() {
+	  if (Math.random() <0.5) {
+		  defense +=20;
+	  }
+	  else {
+		  defense -= 10;
+	  }
+  }
+  
+  public void thirAtt() {
+	  defense+=40;
+	  attackr+=0.2;
+  }
+  
 }

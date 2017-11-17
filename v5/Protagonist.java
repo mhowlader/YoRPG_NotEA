@@ -26,6 +26,11 @@ public abstract class  Protagonist extends Character{
     public int getDefense(){
 	return defense;
     }
+	
+	public int getHP() {
+		return life;
+	}
+	
     public String getName(){
 	return name;
     }
@@ -39,6 +44,10 @@ public abstract class  Protagonist extends Character{
     public int attack(Monster x){
 	int damage = (int) (strength * attackr) - x.getDefense(); //damage inflicted calculation
 	x.lowerHP(damage); //lowers HP by damage
+	
+	if (damage < 0) {
+		return 0;
+	}
 	return damage;
     }
 	
@@ -56,6 +65,10 @@ public abstract class  Protagonist extends Character{
 	public abstract String secAttName();
 	
 	public abstract String thirAttName();
+	
+	public abstract void secAtt();
+	
+	public abstract void thirAtt();
 	
 }
     

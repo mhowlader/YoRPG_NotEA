@@ -84,7 +84,7 @@ public class YoRPG
     //instantiate the player's character
     //pat = new Protagonist( name );
 	
-	s= "\n Choose your Role: \n";
+	s= "\n Choose your Character: \n";
 	s += "\t1: Tank\n";
 	s += "\t2: Berserker\n";
 	s += "\t3: Mage\n";
@@ -120,7 +120,8 @@ public class YoRPG
   public boolean playTurn()
   {
     int i = 1;
-    int d1, d2, selAtck;
+    int d1, d2;
+	int selAtck=1;
 	String mName;
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
@@ -170,10 +171,18 @@ public class YoRPG
 	  try {
 			System.out.println( "\nSelect an attack:" );
 			System.out.printf( "\n1. %s \t 2. %s \t 3. %s\n", pat.firstAttName(), pat.secAttName(), pat.thirAttName () );
-			System.out.print("Selection: ");
+			System.out.println("Selection: ");
 			selAtck= Integer.parseInt(in.readLine() );
 		}
 		catch (IOException e) {}
+		
+		if (selAtck==2) {
+			pat.secAtt();
+		}
+		
+		if (selAtck!=3) {
+			
+		
 
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
@@ -183,6 +192,36 @@ public class YoRPG
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
+		
+		System.out.println( "Your current HP is: " + pat.getHP());
+		}
+		
+		else if (selAtck==3) {
+			if (Math.random()<0.5) { //50% chance for it to work
+				System.out.println (pat.thirAttName() + "was successful!") ;
+				pat.thirAtt(); //performs the special attack
+				
+				d1 = pat.attack( smaug );
+				d2 = smaug.attack( pat );
+
+				System.out.println( "\n" + pat.getName() + " dealt " + d1 +
+                            " points of damage.");
+
+				System.out.println( "\n" + mName + "smacked " + pat.getName() +
+                            " for " + d2 + " points of damage.");
+				System.out.println( "Your current HP is: " + pat.getHP());
+			}
+				
+			else {
+				System.out.println(pat.thirAttName() + "was unsucessful! You miss a turn");
+				d2 = smaug.attack( pat );
+				System.out.println( "\n" + mName+ "smacked " + pat.getName() +
+                            " for " + d2 + " points of damage.");
+				System.out.println( "Your current HP is: " + pat.getHP());
+			}
+			
+		}
+				
 	    }//end while
 
 	    //option 1: you & the monster perish
