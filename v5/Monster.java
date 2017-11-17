@@ -1,7 +1,4 @@
-/* That Better Team (Hasif Ahmed, Mohtasim Howlader, Kyle Tau)
-APCS1 pd 2
-HW 28 -- Ye Olde Role Playing Game
-11-09-17 */
+
 
 public class Monster extends Character{
     protected String name;
